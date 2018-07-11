@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+
+// Colors
+$c-darkest-blue: #001841;
+$c-darker-blue: #003970;
+$c-dark-blue: #033970;
+$c-blue: #105AA3;
+$c-mid-blue: #326C96;
+$c-light-blue: #4BA7EE;
+$c-ligther-blue: #48A8F1;
+$c-lightest-blue: #C9E3F9;
+$c-darker-gray: #64676C;
+$c-gray: #616469;
+$c-mid-gray: #8B9199;
+$c-light-gray: #9DA2A9;
+$c-lighter-gray:#DEE1E8;
+$c-white: #ffffff;
+$c-mid-white: #F9F9F9;
+$c-red: #E82E34;
+$c-green: #6DC138;
+
+// Typography
+$sans-serif:  'Roboto', Helvetica, Verdana, sans-serif;
+$sans-serif-light:  'Roboto-Light', Helvetica, Verdana, sans-serif;
+$sans-serif-bold: 'Roboto-Bold', Helvetica, Verdana, sans-serif;
+$serif: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+
+// MediaQueries Breakpoints
+// See https://github.com/carloscabo/mqbe and ./utils for both js and sass media queries helpers
+$mobile: 600px;
+$tablet: 1023px;
+$small-desktop:  1024px;
+$medium-desktop: 1264px;
+
+// Regimens grid spacing
+$regimens-grid-columns: 5;
+$regimens-grid-gutter: 1%;
+
+// Main grid spacing
+$default-grid-columns: 12;
+$default-grid-gutter: 2%;

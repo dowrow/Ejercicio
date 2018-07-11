@@ -1,0 +1,17 @@
+<header class="upgrade__header">
+  <div class="upgrade__image" [ngClass]="imageClass"></div>
+  <section class="upgrade__text">
+    <h2 class="upgrade__title">{{ title }}</h2>
+    <p 
+      class="upgrade__description" 
+      [ngClass]="{ 'upgrade__description--collapsed': collapsed }" 
+      [innerHTML]="description | safeHTML">
+    </p>
+    <a class="upgrade__toggle" (click)="toggle()">Más información y condiciones
+      <span class="upgrade__toggle-icon" [ngClass]="{ 'upgrade__toggle-icon--collapsed': collapsed }"></span>
+    </a>
+  </section>
+</header>
+<aside class="upgrade__details" [ngClass]="{ 'upgrade__details--collapsed': collapsed }">
+  <ng-content></ng-content>
+</aside>

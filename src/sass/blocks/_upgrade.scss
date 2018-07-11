@@ -1,0 +1,154 @@
+.upgrade {
+  border: 1px solid $c-lighter-gray;
+  margin-bottom: 23px;
+  display: block;
+}
+
+.upgrade__header {
+  @include grid($gutter: $default-grid-gutter, $flex-wrap: wrap);
+}
+
+.upgrade__image {
+  @include grid-col($col: 3, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  max-height: 180px;
+}
+
+.upgrade__image--yoga {
+  background-image: url('/assets/img/yoga.png');
+}
+
+.upgrade__image--spa {
+  background-image: url('/assets/img/spa.png');
+}
+
+.upgrade__image--room-service {
+  background-image: url('/assets/img/room-service.png');
+}
+
+.upgrade__image--room-service {
+  background-image: url('/assets/img/room-service.png');
+}
+
+.upgrade__image--drink {
+  background-image: url('/assets/img/drink.png');
+}
+
+.upgrade__text {
+  @include grid-col($col: 6, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+  min-height: 180px;
+  margin-bottom: 0;
+}
+
+.upgrade__title{
+  @extend %dark-subtitle;
+}
+
+.upgrade__description {
+  @extend %body-text;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+  min-height: 80px;
+}
+
+.upgrade__description--collapsed {
+  @extend %body-text;
+  height: 80px;
+}
+
+.upgrade__toggle {
+  @extend %light-link;
+  cursor: pointer;
+}
+
+.upgrade__toggle-icon {
+  background-image: url('/assets/img/angle-down-blue.svg');
+  width: 12px;
+  height: 8px;
+  display: inline-block;
+  background-size: cover;
+  margin-left: 20px;
+  @include transform(rotate(180deg));
+}
+
+.upgrade__toggle-icon--collapsed {
+  @include transform(rotate(360deg));
+}
+
+.upgrade__details--collapsed {
+  height: 0;
+  overflow: hidden;
+}
+
+.upgrade__details {
+  @include grid($gutter: $default-grid-gutter, $flex-wrap: wrap);
+}
+
+.upgrade__offset-1 {
+  @include grid-col($col: 1, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+}
+
+.upgrade__offset-2 {
+  @include grid-col($col: 2, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+}
+
+.upgrade__includes {
+  @extend %big-body-text;
+  @include grid-col($col: 11, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+  margin-top: 24px;
+}
+
+.upgrade__feature-list {
+  @include grid-col($col: 3, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+  @extend %body-text;
+  margin-left: 0;
+  padding-left: 28px;
+}
+
+.upgrade__note {
+  @include grid-col($col: 11, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+  @extend %note-text;
+  margin-top: 37px;
+}
+
+@include media($tablet) {
+
+  .upgrade__text {
+    @include grid-col($col: 9, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+    padding-right: 10px;
+  }
+
+  .upgrade__includes, .upgrade__note {
+    margin-left: 23px;
+  }
+
+  .upgrade__offset-1, .upgrade__offset-2 {
+    display: none;
+  }
+
+  .upgrade__feature-list {
+    @include grid-col($col: 12, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+  }
+}
+
+@include media($mobile) {
+  .upgrade__image {
+    @include grid-col($col: 12, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+    @include aspect-ratio(3, 2);
+  }
+
+  .upgrade__text {
+    @include grid-col($col: 12, $gutter: $default-grid-gutter, $grid-columns: $default-grid-columns);
+    padding-left: 20px; 
+    padding-right: 20px;
+  }
+
+  .upgrade__details {
+    padding-left: 5px; 
+    padding-right: 5px;
+  }
+}

@@ -1,0 +1,57 @@
+.extra {
+  display: block;
+  @include clearfix;
+  background-color: $c-white;
+  border: 1px solid $c-lighter-gray;
+  margin-bottom: 24px;
+  position: relative;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.extra__ribbon {
+  background-color: $c-red;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  @extend %ribbon-text;
+  padding: 7px 21px 7px 21px;
+}
+
+.extra__header {
+  margin-top: 30px;  
+  margin-bottom: 30px;
+}
+
+.extra__upgrades--collapsed {
+  height: 0;
+  overflow: hidden;
+}
+
+.extra__toggle {
+  cursor: pointer;
+}
+
+.extra__toggle-icon {
+  background-image: url('/assets/img/angle-down-blue.svg');
+  width: 21px;
+  height: 13px;
+  display: inline-block;
+  background-size: cover;
+  margin-right: 20px;
+  @include transform(rotate(180deg));
+}
+
+.extra__toggle-icon--collapsed {
+  @include transform(rotate(360deg));
+}
+
+.extra__title {
+  @extend %light-title;
+  display: inline;
+  margin-right: 7px;
+}
+
+.extra__optional {
+  @extend %optional-text;
+}

@@ -1,0 +1,14 @@
+<span *ngIf="exclusive" class="extra__ribbon">
+  EXCLUSIVO HOTELES.COM
+</span>
+<header class="extra__header">
+  <a class="extra__toggle" (click)="toggle()">
+    <h1 class="extra__title">
+      <span class="extra__toggle-icon" [ngClass]="{'extra__toggle-icon--collapsed': collapsed} "></span>{{ title }}
+    </h1>
+    <small *ngIf="optional" class="extra__optional hide-on-mobile">Opcional</small>
+  </a>
+</header>
+<section class="extra__upgrades" [ngClass]="{ 'extra__upgrades--collapsed': collapsed }">
+  <ng-content></ng-content>
+</section>

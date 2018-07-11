@@ -1,0 +1,11 @@
+<header class="regimen__header">
+  <h3 class="regimen__title">{{ title }}</h3>
+</header>
+<hr class="regimen__line" />
+<ul class="regimen__feature-list">
+  <li *ngFor="let feature of features" class="regimen__feature-item">{{ feature }}</li>
+</ul>
+<footer (click)="onSelected($event)" class="regimen__footer" [ngClass]="{ 'regimen__footer--selected': model === id }">
+  <input class="regimen__radio" type="radio" [id]="id" [name]="id" [value]="id" [(ngModel)]="model"/>
+  <label class="regimen__radio-label" [for]="id">Elegir régimen</label>
+</footer>

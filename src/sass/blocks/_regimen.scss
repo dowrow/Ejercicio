@@ -1,0 +1,140 @@
+.regimen {
+  background-color: $c-white;
+  min-height: 488.06px;
+  border: 1px solid $c-lightest-blue;
+  border-radius: 2px;
+  @include grid-col($col: 1, $grid-columns: $regimens-grid-columns, $gutter: $regimens-grid-gutter);
+  position: relative;
+}
+
+.regimen--selected {
+  border: 1px solid $c-mid-blue;
+}
+
+@include media($tablet) {
+  .regimen {
+    @include grid-col($col: 5, $grid-columns: $regimens-grid-columns, $gutter: $regimens-grid-gutter);
+    margin-bottom: 15px;
+  }
+}
+
+.regimen__header {
+  height: 66px;
+  display:table;
+  width: 100%;
+}
+
+.regimen__title {
+  @extend %regular-subtitle;
+  text-align: center;
+  display: table-cell; 
+  vertical-align: middle; 
+  line-height: 20px;
+}
+
+.regimen__line {
+  margin-top: 0;
+  height: 1px;
+  width: 70px;
+  background-color: $c-lightest-blue;
+  border:none;
+}
+
+.regimen__feature-list {
+  @extend %darkest-text;
+  list-style: none;
+  text-align: left;
+  padding-left: 9px;
+  padding-right: 9px;
+  line-height: 17px;
+  max-height: 336px;
+  overflow-y: scroll;
+}
+
+.regimen__feature-item {
+  padding-left: 18px;
+  text-indent: -18px;
+  margin-bottom: 9px;
+}
+
+.regimen__feature-item::before {
+  content: "• ";
+  color: $c-light-gray;
+  margin-right: 9px;
+}
+
+.regimen__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(222, 225, 232, 0.38);
+  text-align: center;
+  padding: 13px;
+  margin: 13px;
+  cursor: pointer;
+}
+
+.regimen__footer--selected {
+  border: 1px solid $c-mid-blue;
+}
+
+.regimen__footer--selected .regimen__radio-label {
+  color: $c-dark-blue;
+}
+
+.regimen__radio {
+  margin-right: 17px;
+} 
+
+.regimen__radio {
+    display:none;
+}
+
+.regimen__radio-label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.regimen__radio-label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+}
+
+.regimen__radio:checked + .regimen__radio-label:before {
+  border: 1px solid $c-green;
+}
+
+.regimen__radio:not(:checked) + .regimen__radio-label:before {
+  border: 1px solid $c-light-gray;
+}
+
+.regimen__radio-label:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: $c-green;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+}
+
+.regimen__radio:not(:checked) + .regimen__radio-label:after {
+  opacity: 0;
+}
+
+.regimen__radio:checked + .regimen__radio-label:after {
+  opacity: 1;
+}
+
+.regimen__radio-label {
+  @extend %body-text;
+}

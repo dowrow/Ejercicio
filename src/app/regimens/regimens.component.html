@@ -1,0 +1,61 @@
+<section class="regimens-section">
+  <h1 class="regimens-section__title">
+    HOTEL
+    <strong>Mieres del Camín Apartamentos</strong>
+    <span class="regimens-section__rating rating">
+      <span class="rating__star"></span>
+      <span class="rating__star"></span>
+      <span class="rating__star"></span>
+      <span class="rating__star"></span>
+    </span>
+  </h1>
+  <div class="regimens-section__regimens">
+    <app-regimen 
+      class="regimen"
+      [ngClass]="{ 'regimen--selected': selectedRegimen === 'solo-alojamiento' }"
+      [id]="'solo-alojamiento'" 
+      [model]="selectedRegimen" 
+      [title]="'Solo Alojamiento'"
+      [features]="['Sin régimen', 'Botella de agua de bienvenida']"
+      (selected)="onRegimenSelected($event)">
+    </app-regimen>
+    <app-regimen 
+      class="regimen"
+      [ngClass]="{ 'regimen--selected': selectedRegimen === 'alojamiento-y-desayuno' }"
+      [id]="'alojamiento-y-desayuno'" 
+      [model]="selectedRegimen" 
+      [title]="'Alojamiento y Desayuno'"
+      [features]="['Desayuno buffet completo']"
+      (selected)="onRegimenSelected($event)">
+    </app-regimen>
+    <app-regimen 
+      class="regimen"
+      [ngClass]="{ 'regimen--selected': selectedRegimen === 'media-pension' }"
+      [id]="'media-pension'" 
+      [model]="selectedRegimen" 
+      [title]="'Media Pensión'"
+      [features]="['Desayuno buffet completo', 'Cena buffet', 'No incluye']"
+      (selected)="onRegimenSelected($event)">
+    </app-regimen>
+    <app-regimen
+      class="regimen"
+      [ngClass]="{ 'regimen--selected': selectedRegimen === 'todo-incluido' }"
+      [id]="'todo-incluido'" 
+      [model]="selectedRegimen" 
+      [title]="'Todo incluido'"
+      [features]="['Dispondrás de comida y bebida todo el día y durante toda tu estancia.', 'Restaurante buffet', 'Snack Bar', 'Servicio de bares (marcas nacionales)']"
+      (selected)="onRegimenSelected($event)">
+    </app-regimen>
+    <app-regimen 
+      class="regimen"
+      [ngClass]="{ 'regimen--selected': selectedRegimen === 'unlimited-services' }"
+      [id]="'unlimited-services'" 
+      [model]="selectedRegimen" 
+      [title]="'Unlimited Services'"
+      [features]="['Restaurante buffet con bebidas Premium', 'Restaurante a la carta (una cena por estancia)', 
+      'Snack Bar con bebidas Premium', 'Minibar incluido', 'Acceso a SPA y 45 minutos de masaje por persona',
+      'Actividades deportivas (acuáticas sin motor)', 'Caja fuerte', 'Parking gratuito', 'Lavandería']"
+      (selected)="onRegimenSelected($event)">
+    </app-regimen>
+  </div>
+</section>

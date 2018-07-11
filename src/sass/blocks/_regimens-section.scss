@@ -1,0 +1,32 @@
+.regimens-section {
+  @include box-shadow(0, 2px, 4px, rgba(0, 0, 0, 0.5));
+  @include clearfix;
+  background-color: $c-mid-white;
+  margin-top: 1px;
+  border-radius: 3px;
+  padding-bottom: 19px;
+  margin-bottom: 50px;
+}
+
+@include media($tablet) {
+  .regimens-section {
+    padding: 15px;
+  }
+}
+
+.regimens-section__title {
+  margin-top: 44px;
+  margin-bottom: 49px;
+  text-align: center;
+  @extend %darker-title;
+}
+
+.regimens-section__rating {
+  margin-left: 64px;
+}
+
+.regimens-section__regimens {
+  @include grid($gutter: $regimens-grid-gutter, $flex-wrap: wrap);
+  padding-left: $regimens-grid-gutter;
+  padding-right: $regimens-grid-gutter;
+}

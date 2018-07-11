@@ -1,0 +1,107 @@
+%light-title {
+ font-family: $serif;
+ font-weight: bold;
+ font-size: 24px;
+ line-height: 38px;
+ color: $c-light-blue;
+}
+
+%darker-title {
+  font-family: $serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: $c-darker-blue;
+  font-weight: normal;
+  strong {
+    font-weight: bold;
+  }
+}
+
+%light-subtitle {
+  font-family: $serif;
+  font-size: 16px;
+  line-height: 14px;
+  color: $c-light-blue;
+}
+
+%dark-subtitle {
+  font-family: $serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: $c-dark-blue;
+}
+
+%darker-subtitle {
+  font-family: $serif;
+  font-size: 16px;
+  line-height: 14px;
+  color: $c-darker-blue;
+}
+
+%regular-subtitle {
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: $c-blue;
+}
+
+%accent-text {
+  font-family: $sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: $c-dark-blue;
+}
+
+%darkest-text {
+  font-family: $sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: $c-darkest-blue;
+}
+
+%light-link {
+  font-family: $serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: $c-ligther-blue;
+}
+
+%body-text {
+  font-family: $sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: $c-gray;
+}
+
+%big-body-text {
+  font-family: $sans-serif;
+  font-size: 16px;
+  line-height: 17px;
+  color: $c-darker-gray;
+}
+
+%ribbon-text {
+  font-family: $sans-serif-light;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1.52px;
+  color: $c-white;
+}
+
+%optional-text {
+  font-family: $sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: $c-blue;
+}
+
+%note-text {
+  font-family: $sans-serif-bold; 
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  color: $c-dark-blue;
+}

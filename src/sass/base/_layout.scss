@@ -1,0 +1,28 @@
+@import 'flexbox-grid-mixins';
+
+body {
+  background-color: #fafafa;
+}
+ 
+.row {
+  width: 100%;
+  clear: both;
+  @extend %clearfix;
+}
+ 
+.wrapper {
+  max-width: $medium-desktop;
+  padding-left: 33px;
+  padding-right: 33px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  @extend %clearfix;
+}
+ 
+@include media($mobile) {
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
